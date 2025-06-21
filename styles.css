@@ -1,47 +1,74 @@
-/* Email container styling */
+/* Core Email Container */
 #email {
   padding: 50px;
   margin-top: 50px;
   width: 500px;
-  border: 2px solid #444;
+  border: 2px solid #000;
   box-sizing: border-box;
-  background-color: #fffefa;
-  font-family: system-ui, sans-serif;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fdf4ec;
+  font-family: Georgia, serif;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
-/* Confidential and Top Secret tags */
-#confidential,
-#top-secret {
+/* Red Tags */
+#confidential {
   display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: -40px;
+  transform: rotate(-20deg);
   padding: 10px 20px;
   margin-left: 10px;
-  border: 2px solid crimson;
+  border: 3px solid red;
+  color: red;
   font-weight: bold;
-  color: white;
-  background-color: crimson;
-  transform: rotate(-5deg);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-color: white;
 }
 
-/* Different rotation for variety */
 #top-secret {
-  border-color: navy;
-  background-color: navy;
-  transform: rotate(5deg);
+  display: inline-block;
+  position: absolute;
+  bottom: 10px;
+  right: -30px;
+  transform: rotate(15deg);
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: 3px solid red;
+  color: red;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-color: white;
 }
 
-/* Paragraph spacing */
+
+/* Specific positioning + rotation */
+#confidential {
+  top: 10px;
+  left: -40px;
+  transform: rotate(-20deg);
+}
+
+#top-secret {
+  bottom: 10px;
+  right: -30px;
+  transform: rotate(15deg);
+}
+
+/* Paragraph styling */
 #email p {
-  margin-top: 1.5rem;
-  line-height: 1.6;
   font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 1.2em;
 }
 
-/* Blurred text */
+/* Blur effect */
 .blurred {
   filter: blur(3px);
-  background-color: #eee;
-  color: transparent;
+  background-color: rgba(255,255,255,0.6);
+  padding: 2px 4px;
   border-radius: 4px;
-  padding: 0 4px;
 }
